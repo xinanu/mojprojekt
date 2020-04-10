@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Galeria</title>
+  <link rel="stylesheet" type="text/css" href="galeria.css">
+ <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+ 
+  <meta charset="utf-8">
+</head>
+ 
+<body>
+
+<img class="img1" src="https://pbs.twimg.com/media/DRaNjxBWkAAK4Jv.jpg">
+<img class="img2" src="https://pbs.twimg.com/media/DRbPe0DXUAMA3YP.jpg">
+<img class="img3" src="https://pbs.twimg.com/media/DSI-tOZW0AE9aM_.jpg">
+
+<div class="powiekszony">
+<img class="img4" src="https://pbs.twimg.com/media/DRqoau4XUAE6lvQ.jpg">
+</div>
+<script type="text/javascript">
+ $('.img1, .img2, .img3').click(function() { //po kliknięciu (Y) w miniaturę (X)
+;
+ //pokaż powiększony obrazek
+$('.powiekszony').show();
+ //zmień atrybut src dużego obrazka na wartość jaka jest w src klikniętej miniatury
+var src = $(this).attr('src');
+console.log(src);
+$('.img4').attr('src', src);
+});
+
+$('.powiekszony').click(function() { //po kliknięciu (Y) w powiększony obrazek (X)
+ //ukryj powiększony obrazek
+$('.powiekszony').hide();
+});
+</script>
+
+</body>
+</html>

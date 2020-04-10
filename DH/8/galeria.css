@@ -1,0 +1,36 @@
+.img1 {
+width: 20%;
+}
+
+.img2 {
+width: 20%;
+}
+
+.img3 {
+width: 20%;
+}
+
+.img4 {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto; 
+width: 80%;
+ 
+
+
+}
+
+.powiekszony {
+background-color: rgba(0, 0, 0, 0.5);
+width:100%;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+display: none; 
+}
