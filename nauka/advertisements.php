@@ -10,32 +10,33 @@
 <div class="container">
     <ul class="nav nav-tabs" role="tablist">
         <li><a href="form.php">Log in / Register</a></li>
-        <li class="active"><a href="form_users.php">Users</a></li>
-        <li><a href="advertisements.php">Advertisements</a></li>
+        <li><a href="form_users.php">Users</a></li>
+        <li class="active"><a href="advertisements.php">Advertisements</a></li>
         <li><a href="add_advertisement.php">Add your own advertisement</a></li>
     </ul>
 </div>
 
 <?php include "connection.php";
 
-$result = mysqli_query($conn,"SELECT * FROM users");
+$result = mysqli_query($conn,"SELECT * FROM ads");
 
 
 echo
 "<table class=\"table table-striped\">
 <tr>
 <th>id</th>
-<th>username</th>
+<th>text</th>
 </tr>";
 
 while($row = mysqli_fetch_array($result))
 {
     echo "<tr>";
     echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['username'] . "</td>";
+    echo "<td>" . $row['text'] . "</td>";
     echo "</tr>";
 }
 echo "</table>";
 
 
 ?>
+

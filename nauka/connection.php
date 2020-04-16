@@ -1,14 +1,15 @@
 <?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "project";
 
-$dbhost = 'localhost';
-$dbuser = '17_ziobro';
-$dbpass = 'N6g7t8g1w9';
-$dbname = '17_ziobro';
-$conn = mysql_connect($dbhost, $dbuser, $dbpass)
-or die('Bład połączenia z serwerem: ' . mysql_error());
 
-mysql_select_db($dbname)
-or die('Nie ma bazy o nazwie: '.$dbname);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-mysql_set_charset('utf8');
-        ?>
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
